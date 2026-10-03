@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PRESTIGE HOME DEALS - Quality home appliances and products in Kenya.">
+  <title>PRESTIGE HOME DEALS | Online Shop Kenya</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container nav-container">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">P</span>
+      <span>PRESTIGE HOME DEALS</span>
+    </a>
+
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container hero-content">
+      <div>
+        <span class="eyebrow">ONLINE SHOP • KENYA</span>
+        <h1>Quality Products for Your Home</h1>
+        <p>
+          Shop appliances and home products from PRESTIGE HOME DEALS.
+          Browse products, place your order and get delivery information.
+        </p>
+
+        <a href="#products" class="btn btn-primary">Shop Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="shop-section" id="products">
+    <div class="container">
+
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">OUR PRODUCTS</span>
+          <h2>Shop Products</h2>
+        </div>
+      </div>
+
+      <div class="filters">
+
+        <div class="search-box">
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="Search products..."
+            autocomplete="off"
+          >
+        </div>
+
+        <select id="categoryFilter">
+          <option value="">All Categories</option>
+        </select>
+
+      </div>
+
+      <div id="productsLoading" class="status-box">
+        Loading products...
+      </div>
+
+      <div id="productsGrid" class="products-grid"></div>
+
+      <div id="productsEmpty" class="empty-box hidden">
+        No products found.
+      </div>
+
+    </div>
+  </section>
+
+  <section class="benefits">
+    <div class="container benefits-grid">
+
+      <div class="benefit-card">
+        <div class="benefit-icon">✓</div>
+        <h3>Quality Products</h3>
+        <p>Browse selected home and appliance products.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">₦</div>
+        <h3>Kenya Pricing</h3>
+        <p>Prices are displayed in Kenyan Shillings.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">🚚</div>
+        <h3>Delivery Available</h3>
+        <p>Delivery arrangements are confirmed when ordering.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">💬</div>
+        <h3>WhatsApp Support</h3>
+        <p>Contact us directly for assistance.</p>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" id="contact">
+  <div class="container footer-grid">
+
+    <div>
+      <h3>PRESTIGE HOME DEALS</h3>
+      <p>
+        Your online shop for home appliances and products in Kenya.
+      </p>
+    </div>
+
+    <div>
+      <h4>Contact</h4>
+      <p>Phone: 0769 218 680</p>
+      <a
+        href="https://wa.me/254769218680"
+        target="_blank"
+        rel="noopener"
+      >
+        WhatsApp us
+      </a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 PRESTIGE HOME DEALS. All rights reserved.
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
