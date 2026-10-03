@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Product details - PRESTIGE HOME DEALS">
+  <title>Product | PRESTIGE HOME DEALS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container nav-container">
+
+    <a href="index.html" class="logo">
+      <span class="logo-mark">P</span>
+      <span>PRESTIGE HOME DEALS</span>
+    </a>
+
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="index.html#products">Products</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+<main class="product-page">
+
+  <div class="container">
+
+    <a href="index.html#products" class="back-link">
+      ← Back to Products
+    </a>
+
+    <div id="productLoading" class="status-box">
+      Loading product...
+    </div>
+
+    <div id="productError" class="empty-box hidden">
+      Product could not be found.
+    </div>
+
+    <section id="productDetails" class="product-details hidden">
+
+      <div class="product-image-large">
+        <img id="productImage" src="" alt="">
+        <div id="productPlaceholder" class="product-placeholder-large">
+          <span>PRESTIGE</span>
+        </div>
+      </div>
+
+      <div class="product-information">
+
+        <span id="productCategory" class="product-category"></span>
+
+        <h1 id="productName"></h1>
+
+        <div class="price-row">
+          <span id="productPrice" class="product-price"></span>
+          <span id="productOldPrice" class="old-price"></span>
+        </div>
+
+        <div class="delivery-note">
+          🚚 Delivery available
+        </div>
+
+        <div id="freeDeliveryNote" class="free-delivery hidden">
+          Free delivery for orders above KSh 10,000
+        </div>
+
+        <p id="productDescription" class="product-description"></p>
+
+        <div class="quantity-control">
+          <label for="productQuantity">Quantity</label>
+
+          <div class="quantity-buttons">
+            <button type="button" id="quantityMinus">−</button>
+            <input
+              id="productQuantity"
+              type="number"
+              min="1"
+              value="1"
+            >
+            <button type="button" id="quantityPlus">+</button>
+          </div>
+        </div>
+
+        <button id="orderNowButton" class="btn btn-primary btn-large">
+          Order Now
+        </button>
+
+        <a
+          href="https://wa.me/254769218680"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-whatsapp btn-large"
+        >
+          Chat on WhatsApp
+        </a>
+
+      </div>
+
+    </section>
+
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-bottom">
+    © 2026 PRESTIGE HOME DEALS. All rights reserved.
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="app.js"></script>
+
+</body>
+          </html>
