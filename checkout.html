@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PRESTIGE HOME DEALS - Quality home appliances and products in Kenya.">
+  <title>PRESTIGE HOME DEALS | Online Shop Kenya</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container nav-container">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">P</span>
+      <span>PRESTIGE HOME DEALS</span>
+    </a>
+
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container hero-content">
+      <div>
+        <span class="eyebrow">ONLINE SHOP • KENYA</span>
+        <h1>Quality Products for Your Home</h1>
+        <p>
+          Shop appliances and home products from PRESTIGE HOME DEALS.
+          Browse products, place your order and get delivery information.
+        </p>
+
+        <a href="#products" class="btn btn-primary">Shop Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="shop-section" id="products">
+    <div class="container">
+
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">OUR PRODUCTS</span>
+          <h2>Shop Products</h2>
+        </div>
+      </div>
+
+      <div class="filters">
+
+        <div class="search-box">
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="Search products..."
+            autocomplete="off"
+          >
+        </div>
+
+        <select id="categoryFilter">
+          <option value="">All Categories</option>
+        </select>
+
+      </div>
+
+      <div id="productsLoading" class="status-box">
+        Loading products...
+      </div>
+
+      <div id="productsGrid" class="products-grid"></div>
+
+      <div id="productsEmpty" class="empty-box hidden">
+        No products found.
+      </div>
+
+    </div>
+  </section>
+
+  <section class="benefits">
+    <div class="container benefits-grid">
+
+      <div class="benefit-card">
+        <div class="benefit-icon">✓</div>
+        <h3>Quality Products</h3>
+        <p>Browse selected home and appliance products.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">₦</div>
+        <h3>Kenya Pricing</h3>
+        <p>Prices are displayed in Kenyan Shillings.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">🚚</div>
+        <h3>Delivery Available</h3>
+        <p>Delivery arrangements are confirmed when ordering.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">💬</div>
+        <h3>WhatsApp Support</h3>
+        <p>Contact us directly for assistance.</p>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" id="contact">
+  <div class="container footer-grid">
+
+    <div>
+      <h3>PRESTIGE HOME DEALS</h3>
+      <p>
+        Your online shop for home appliances and products in Kenya.
+      </p>
+    </div>
+
+    <div>
+      <h4>Contact</h4>
+      <p>Phone: 0769 218 680</p>
+      <a
+        href="https://wa.me/254769218680"
+        target="_blank"
+        rel="noopener"
+      >
+        WhatsApp us
+      </a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 PRESTIGE HOME DEALS. All rights reserved.
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="app.js"></script>
+
+</body>
+          </html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | PRESTIGE HOME DEALS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container nav-container">
+
+    <a href="index.html" class="logo">
+      <span class="logo-mark">P</span>
+      <span>PRESTIGE HOME DEALS</span>
+    </a>
+
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="index.html#products">Products</a>
+    </nav>
+
+  </div>
+</header>
+
+<main class="checkout-page">
+
+  <div class="container">
+
+    <a href="index.html" class="back-link">
+      ← Continue Shopping
+    </a>
+
+    <div class="checkout-layout">
+
+      <section class="checkout-form-card">
+
+        <span class="eyebrow">ORDER DETAILS</span>
+        <h1>Complete Your Order</h1>
+
+        <div id="checkoutError" class="alert alert-error hidden"></div>
+
+        <form id="checkoutForm">
+
+          <div class="form-group">
+            <label for="customerName">Full Name *</label>
+            <input
+              id="customerName"
+              name="customerName"
+              type="text"
+              required
+              placeholder="Your full name"
+            >
+          </div>
+
+          <div class="form-row">
+
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                required
+                placeholder="07XXXXXXXX"
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="Optional"
+              >
+            </div>
+
+          </div>
+
+          <div class="form-row">
+
+            <div class="form-group">
+              <label for="county">County *</label>
+              <input
+                id="county"
+                name="county"
+                type="text"
+                required
+                placeholder="e.g. Kirinyaga"
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="town">Town / Area *</label>
+              <input
+                id="town"
+                name="town"
+                type="text"
+                required
+                placeholder="e.g. Kerugoya"
+              >
+            </div>
+
+          </div>
+
+          <div class="form-group">
+            <label for="address">Delivery Address *</label>
+            <textarea
+              id="address"
+              name="address"
+              rows="3"
+              required
+              placeholder="Enter your delivery location/address"
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="notes">Additional Notes</label>
+            <textarea
+              id="notes"
+              name="notes"
+              rows="3"
+              placeholder="Any additional information..."
+            ></textarea>
+          </div>
+
+          <div class="checkout-notice">
+            After submitting your order, payment instructions and
+            order confirmation will be displayed.
+          </div>
+
+          <button
+            id="placeOrderButton"
+            type="submit"
+            class="btn btn-primary btn-large"
+          >
+            Place Order
+          </button>
+
+        </form>
+
+      </section>
+
+      <aside class="order-summary-card">
+
+        <h2>Your Order</h2>
+
+        <div id="checkoutLoading">
+          Loading order...
+        </div>
+
+        <div id="checkoutProduct" class="hidden">
+
+          <div class="summary-product">
+
+            <div class="summary-image">
+              <img id="summaryImage" src="" alt="">
+              <div id="summaryPlaceholder" class="product-placeholder">
+                P
+              </div>
+            </div>
+
+            <div>
+              <h3 id="summaryName"></h3>
+              <p>
+                Quantity:
+                <strong id="summaryQuantity"></strong>
+              </p>
+            </div>
+
+          </div>
+
+          <div class="summary-line">
+            <span>Price</span>
+            <strong id="summaryPrice"></strong>
+          </div>
+
+          <div class="summary-line">
+            <span>Quantity</span>
+            <strong id="summaryQty"></strong>
+          </div>
+
+          <div class="summary-total">
+            <span>Total</span>
+            <strong id="summaryTotal"></strong>
+          </div>
+
+        </div>
+
+      </aside>
+
+    </div>
+
+  </div>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="app.js"></script>
+
+</body>
+  </html>
