@@ -22,7 +22,7 @@
   */
 
   const SUPABASE_ANON_KEY =
-    "PASTE_YOUR_SUPABASE_ANON_KEY_HERE";
+    "sb_publishable_hoVyM0VHwiOHapPiBdktQg_58pVPc4T";
 
   window.PRESTIGE_CONFIG = {
     SUPABASE_URL,
